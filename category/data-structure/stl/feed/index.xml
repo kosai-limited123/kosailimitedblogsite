@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>STL &#8211; Kosai Limited</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../../../../index.html</link>
+	<description>Just read a Blog</description>
+	<lastBuildDate>Thu, 06 Jan 2022 09:32:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.3</generator>
+
+<image>
+	<url>./../../../../wp-content/uploads/2022/01/cropped-cropped-sample-5-1-32x32.jpg</url>
+	<title>STL &#8211; Kosai Limited</title>
+	<link>./../../../../index.html</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Vector</title>
+		<link>./../../../../2022/01/04/vector/index.html</link>
+					<comments>./../../../../2022/01/04/vector/index.html#respond</comments>
+		
+		<dc:creator><![CDATA[mdrahat]]></dc:creator>
+		<pubDate>Tue, 04 Jan 2022 09:34:04 +0000</pubDate>
+				<category><![CDATA[Data structure]]></category>
+		<category><![CDATA[STL]]></category>
+		<guid isPermaLink="false">./../../../../index.html?p=92</guid>
+
+					<description><![CDATA[Introduction An array is a kind of data structure consisting of a collection of elements or data . And it is important to declare of a fixed size of the array every time we declare it . So, it becomes a problem . Hence vector a sequence container that can change size according to the...]]></description>
+										<content:encoded><![CDATA[
+<h3 class="has-white-color has-vivid-purple-background-color has-text-color has-background">Introduction</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>An array is a kind of data structure consisting of a  collection of elements or data . And it is important to declare of a fixed size of the array every time we declare it . So, it becomes a problem . Hence vector a sequence container that can change size according to the data size . This container is a object that contains the data in a dynamic array . So, it has the ability to resize itself. In array after inserting or deleting it needs to be reallocated or the data reallocates their position. So, you can avoid the problem of fixing a size for array. Vector uses iteration to traverse the elements.</p>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-white-color has-vivid-purple-background-color has-text-color has-background">Visualization</h3>
+
+
+
+<div style="height:10px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>Syntax: <span class="has-inline-color has-vivid-cyan-blue-color">vector&lt;data_type> variable_name (size_of_the_vector);</span></p>
+
+
+
+<p>vector&lt;double> money(7);</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="595" height="166" src="./../../../../wp-content/uploads/2022/01/vector-visual.png" alt="" class="wp-image-211" srcset="./../../../../wp-content/uploads/2022/01/vector-visual.png 595w, ./../../../../wp-content/uploads/2022/01/vector-visual-300x84.png 300w" sizes="(max-width: 595px) 100vw, 595px" /><figcaption>Vector visualzation</figcaption></figure>
+
+
+
+<div style="height:35px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-white-color has-vivid-purple-background-color has-text-color has-background">Internal mechanism</h3>
+
+
+
+<div style="height:10px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>When the size is 0 , capacity is 0</p>
+
+
+
+<p>&#8221;           &#8221;   &#8221;      &#8221; 1,        &#8221;        &#8221;  1 &#8211;> doubled</p>
+
+
+
+<p>                            [after inserting one element size becomes 1 which is greater than capacity, so capacity is doubled]</p>
+
+
+
+<p> &#8221;           &#8221;   &#8221;      &#8221; 2,        &#8221;        &#8221;  2 &#8211;> doubled </p>
+
+
+
+<p> &#8221;           &#8221;   &#8221;      &#8221; 3,        &#8221;        &#8221;  4 &#8211;> doubled </p>
+
+
+
+<p> &#8221;           &#8221;   &#8221;      &#8221; 4,        &#8221;        &#8221;  4 &#8211;> No change</p>
+
+
+
+<p>                            [now size=capacity]</p>
+
+
+
+<div style="height:35px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-white-color has-vivid-purple-background-color has-text-color has-background">Drawbacks</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>Vector sometimes over allocates memory, which sometime could be very bad in terms of performances. When ever capacity of vector increases it copy all element from previous vector to new vector.</p>
+
+
+
+<div style="height:35px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-white-color has-vivid-purple-background-color has-text-color has-background">Some useful methods for vector</h3>
+
+
+
+<h4>Iterators</h4>
+
+
+
+<p class="has-black-color has-text-color">begin() , end() , rbegin() , rend() , cbegin() , cend() , crbegin() , crend() .</p>
+
+
+
+<h4>Capacity</h4>
+
+
+
+<p>size() , max_size() , capacity() , resize() , empty() , shrink_to_fit() , reserve() .</p>
+
+
+
+<h4>Element access</h4>
+
+
+
+<p>front() , back() .</p>
+
+
+
+<h4>Modifiers</h4>
+
+
+
+<p>assign() , push_back() , pop_back() , insert() , swap() , clear() , emplace() , emplace_back() .</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../../../2022/01/04/vector/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>List</title>
+		<link>./../../../../2022/01/04/list/index.html</link>
+					<comments>./../../../../2022/01/04/list/index.html#respond</comments>
+		
+		<dc:creator><![CDATA[mdrahat]]></dc:creator>
+		<pubDate>Tue, 04 Jan 2022 09:33:20 +0000</pubDate>
+				<category><![CDATA[Data structure]]></category>
+		<category><![CDATA[STL]]></category>
+		<guid isPermaLink="false">./../../../../index.html?p=88</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[]]></content:encoded>
+					
+					<wfw:commentRss>./../../../../2022/01/04/list/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

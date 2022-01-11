@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Searching algorithms &#8211; Kosai Limited</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../../../../index.html</link>
+	<description>Just read a Blog</description>
+	<lastBuildDate>Wed, 05 Jan 2022 10:27:14 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.3</generator>
+
+<image>
+	<url>./../../../../wp-content/uploads/2022/01/cropped-cropped-sample-5-1-32x32.jpg</url>
+	<title>Searching algorithms &#8211; Kosai Limited</title>
+	<link>./../../../../index.html</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Binary Search</title>
+		<link>./../../../../2022/01/05/binary-search/index.html</link>
+					<comments>./../../../../2022/01/05/binary-search/index.html#respond</comments>
+		
+		<dc:creator><![CDATA[mdrahat]]></dc:creator>
+		<pubDate>Wed, 05 Jan 2022 07:45:44 +0000</pubDate>
+				<category><![CDATA[Searching algorithms]]></category>
+		<guid isPermaLink="false">./../../../../index.html?p=135</guid>
+
+					<description><![CDATA[What is Binary search? Binary search is a algorithm to find a value in a sorted array . It uses the divide and conquer method to search a particular element. It divides the array based on the element to find and cuts half , then again does the same until the required value is found....]]></description>
+										<content:encoded><![CDATA[
+<h3 class="has-black-color has-pale-cyan-blue-background-color has-text-color has-background">What is Binary search?</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>Binary search is a algorithm to find a value in a sorted array . It uses the divide and conquer method to search a particular element. It divides the array based on the element to find and cuts half , then again does the same until the required value is found. But the first thing we need here is the sorted array where we will use the binary search.</p>
+
+
+
+<div style="height:35px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-black-color has-pale-cyan-blue-background-color has-text-color has-background">A simulation</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="588" height="351" src="./../../../../wp-content/uploads/2022/01/binary-search.png" alt="" class="wp-image-141" srcset="./../../../../wp-content/uploads/2022/01/binary-search.png 588w, ./../../../../wp-content/uploads/2022/01/binary-search-300x180.png 300w" sizes="(max-width: 588px) 100vw, 588px" /><figcaption>Binary search</figcaption></figure>
+
+
+
+<div style="height:35px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-black-color has-pale-cyan-blue-background-color has-text-color has-background">Algorithm</h3>
+
+
+
+<div class="wp-block-group has-cyan-bluish-gray-background-color has-background"><div class="wp-block-group__inner-container">
+<ol type="1"><li>UPPERBOUND:= N</li></ol>
+
+
+
+<p>LOWERBOUND:=1While X is not found</p>
+
+
+
+<p>If UPERBOUND&lt;LOWERBOUND</p>
+
+
+
+<p>Exit &nbsp;(X not found ).</p>
+
+
+
+<p>[end of if]</p>
+
+
+
+<p>MIDPOINT:=LOWERBOUND+( UPPERBOUND-LOWERBOUND) /2</p>
+
+
+
+<p>If LIST[MIDPOINT] &lt; X</p>
+
+
+
+<p>LOWERBOUND := MIDPOINT+1</p>
+
+
+
+<p>If LIST[MIDPOINT] &gt; X</p>
+
+
+
+<p>UPPERBOUND := MIDPOINT – 1</p>
+
+
+
+<p>If LIST[MIDPOINT] = X</p>
+
+
+
+<p>Exit (X found at location MIDPOINT).</p>
+
+
+
+<p>[end of while loop]</p>
+
+
+
+<p>End of program.</p>
+</div></div>
+
+
+
+<div style="height:35px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-black-color has-pale-cyan-blue-background-color has-text-color has-background">Sample code</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<pre class="wp-block-code"><code>int binarySearch(int list&#91;], int x) 
+{
+	lo=1;
+   up=n; 
+
+    while (lo &lt;= up) { 
+        int mid = lo + (up - lo) / 2; 
+  
+         
+        if (list&#91;mid] == x) 
+            return mid; 
+  
+      
+        if (list&#91;mid] &lt; x) 
+            lo = mid + 1; 
+  
+      
+        else
+            up = mid - 1; 
+    } 
+  
+    
+    return -1; 
+} 
+</code></pre>
+
+
+
+<div style="height:35px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-black-color has-pale-cyan-blue-background-color has-text-color has-background">Complexity</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<ul><li>Best case complexity: O ( 1 )</li><li>Average case complexity: O ( log n )</li><li>Worst case complexity: O ( log n )</li></ul>
+
+
+
+<div style="height:35px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-black-color has-pale-cyan-blue-background-color has-text-color has-background">Advantages and Disadvantages</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<ol type="1"><li>This algorithm is very fast than any other searching algorithm.</li><li>The only disadvantage is the array must be sorted otherwise binary search can’t be used.</li><li>For large lists of data, it works significantly better than linear search.</li><li>It employs recursive approach which requires more stack space.</li></ol>
+
+
+
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../../../2022/01/05/binary-search/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

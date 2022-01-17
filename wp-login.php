@@ -94,7 +94,7 @@ var _wpUtilSettings = {"ajax":{"url":"\/kosailimited\/wp-admin\/admin-ajax.php"}
 <script type="text/javascript" src="./wp-includes/js/wp-util.min.js?ver=5.8.3" id="wp-util-js"></script>
 <script type="text/javascript" id="user-profile-js-extra">
 /*  */
-var userProfileL10n = {"user_id":"0","nonce":"d8170fa85a"};
+var userProfileL10n = {"user_id":"0","nonce":"712fd5d86f"};
 /*  */
 </script>
 <script type="text/javascript" id="user-profile-js-translations">
